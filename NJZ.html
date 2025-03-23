@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⋆·˚NewJeans ༘ *</title>
+    <link rel="icon" type="image/png" href="bunny.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image: url(background.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .header{
+            transform: translateY(-25px);
+            background-color: rgb(14, 6, 66);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            padding: 25px 45px;
+            box-shadow: inset -4px 5px 50px 30px rgba(31, 27, 105, 0.916),
+                        inset 5px -10px 30px rgb(87, 75, 188);
+        }
+
+        .info{
+            font-family: 'Press Start 2P', cursive;
+            padding: 45px;
+            margin: 65px auto; 
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            word-wrap: break-word;
+            box-sizing: border-box;
+            width: 1350px;
+            height: auto;
+            background-color: rgb(59, 59, 90);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: inset -4px 5px 80px rgba(77, 75, 112, 0.518),
+                        inset 5px -5px 90px rgb(32, 31, 40);
+        }
+
+        .infoborder{
+            user-select: none;
+            position: absolute;
+            border-radius: 5px;
+            top: -35px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 50px;
+            background-color: rgb(25, 14, 93);
+            box-shadow: 0px 5px 3px 0px rgba(6, 0, 44, 0.5),
+                        inset -4px 5px 15px 1px rgba(86, 75, 188, 0.721),
+                        inset 5px -5px 20px 10px rgba(31, 27, 105, 0.916);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 20px;
+            gap: 5px;
+        }
+
+        .borderx{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+            height: 35px;
+            width: 30px;
+            border: 2px solid white;
+            border-radius: 2px;
+        }
+
+        .bordericons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(76, 104, 208);
+            height: 35px;
+            width: 30px;
+            border: 2px solid white;
+            border-radius: 2px;
+        }
+
+        .divider{
+            margin: 50px auto;
+        }
+
+        .infoheading{
+            margin: 10px auto;
+            font-size: 35px;
+        }
+
+        .infosubheading{
+            margin: 35px auto;
+            font-size: 25px;
+        }
+
+        .infocontent{
+            margin: 20px auto;
+            left: 0;
+            right: 0;
+            width: 100%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+        }
+
+        .section{
+            left: 0;
+            right: 0;
+            width: 100%;
+            display: flex;
+            margin: 20px auto;
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+
+        }
+
+        .sectioncontent{
+            background-color: rgba(17, 18, 43, 0.158);
+            font-size: 25px;
+            border-radius: 10px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .section img{
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .section a{
+            bottom: 0px;
+            transform: translate(3px, 10px);
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .section a:hover{
+            text-decoration: underline;
+            color: rgb(236, 243, 96);
+        }
+
+        .sectionnav{
+            transform: translateY(20px);
+        }
+
+        .logo{
+            transform: translateY(10px);
+            display:flex;
+            align-items: center;
+        }
+
+        .logo-img{
+            height: 70px;
+            width: auto;
+        }
+
+        .navigation{
+            transform: translate(5px, 10px);
+            display: flex;
+            gap: 45px;
+        }
+
+        .navigation a{   
+            font-family: 'Press Start 2P', cursive;   
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .navigation a:hover{
+            color: rgb(236, 243, 96);
+            font-weight: bold;
+        }
+
+        .carousel{
+            margin:20px auto;
+            width: 795px;
+            height: 450px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .slide{
+            display: flex;
+            width: 300%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+            flex-shrink: 0;
+        }
+
+        .slide img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sparkle{
+            overflow: hidden;
+            clip-path: inset(0px);
+            position:absolute;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+        <img src="njz-logo.png" alt="njz-logo" class="logo-img">
+        </div>
+        <nav class="navigation">
+            <a href="NJZ.html">Home</a>
+            <a href="#">About NewJeans</a>
+            <a href="NJZ-Gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <div class="info">
+
+    <img src="xoxo.gif" class="sparkle" width="200" style="left: -90px; top: 20px;">
+    <img src="sparkle1.gif" class="sparkle" width="200" style="right: -85px; top: 150px;">
+    <img src="nj5.gif" class="sparkle" width="250" style="left: -210px; top: 500px;">
+    <img src="heart.gif" class="sparkle" width="100" style="left: -250px; top: 1000px;">
+    <img src="nj4.gif" class="sparkle" width="250" style="right: -210px; top: 990px;">
+    <img src="sparkle1.gif" class="sparkle" width="175" style="left: -180px; top: 1400px;">
+    <img src="omg.gif" class="sparkle" width="135" style="right: -240px; top: 1450px;">
+    <img src="nj1.gif" class="sparkle" width="280" style="left: -180px; top: 1930px;">
+    <img src="sparkle1.gif" class="sparkle" width="200" style="right: -140px; top: 1680px;">
+    <img src="sparkle1.gif" class="sparkle" width="100" style="left: -240px; top: 2430px;">
+    <img src="lightstick.gif" class="sparkle" width="130" style="right: -50px; top: 2300px;">
+    <img src="sparkle1.gif" class="sparkle" width="90" style="right: -250px; top: 2830px;">
+    <img src="bear.gif" class="sparkle" width="185" style="left: -120px; top: 2750px;">
+    <img src="nj3.gif" class="sparkle" width="250" style="right: -140px; top: 3150px;">
+    <img src="sparkle1.gif" class="sparkle" width="100" style="left: -90px; top: 3300px;">
+    <img src="nj2.gif" class="sparkle" width="250" style="left: -160px; top: 3600px;">
+    <img src="sparkle1.gif" class="sparkle" width="200" style="right: -150px; top: 3580px;">
+
+        <div class="infoborder">
+            <div class="bordericons">
+                <center>-</center>
+                </div>
+            <div class="bordericons">
+                <center>◻</center>
+            </div>
+            <div class="borderx">
+            <center>X</center>
+            </div>
+        </div>
+
+        <div class="infoheading">Welcome to NewJeans!</div>
+
+        <div class="carousel">
+            <div class="slide" id="slide">
+                <img src="njz1.jpg">
+                <img src="njz2.jpg">
+                <img src="njz3.jpg">
+                <img src="njz4.jpg">
+            </div>
+        </div>
+
+        <div class="infocontent">
+            <center>A fresh take on K-pop with Y2K vibes and dreamy aesthetics. Discover their music, 
+                visuals, and journey!
+            </center>
+        </div>
+
+        <img src="blue-hearts.gif" alt="NewJeans GIF" width="300" class="divider">
+
+        <div class="infosubheading">
+            Who Are We?
+        </div>
+        <div class="section">
+            <div class="sectioncontent">
+                <p style="text-indent: 50px; text-align: justify;">
+                NewJeans is a South Korean girl group formed by ADOR, a subsidiary of HYBE Corporation. 
+                Debuting on July 22, 2022, the group quickly gained popularity for their fresh and nostalgic 
+                approach to K-pop, blending Y2K aesthetics with modern music trends. Known for their effortless 
+                charm and natural image, NewJeans stands out with a unique sound that incorporates R&B, pop, 
+                and alternative influences. Their self-titled debut EP, featuring hits like Attention and Hype Boy, 
+                propelled them to stardom, earning them critical acclaim and a strong international fanbase. 
+                With their distinctive concept and innovative music, NewJeans continues to redefine the K-pop 
+                landscape.
+                </p>
+
+                <br>
+                <br>
+
+                <center>Want to learn more? Check out: <a href="#" style="font-size: 25px;">About NewJeans</a> 
+                    | <a href="NJZ-Gallery.html" style="font-size: 25px;">Gallery</a></center>
+                
+            </div>
+        </div>
+        
+        <img src="blue-hearts.gif" alt="NewJeans GIF" width="300" class="divider">
+
+        <div class="infosubheading">
+            Check It Out!
+        </div>
+        <div class="section">
+            <div class="sectioncontent">
+                <center><img src="njzcoke.png" width="530"></center>
+                <br>
+                <p style="text-indent: 50px; text-align: justify;">
+                    NewJeans collaborated with Coca-Cola as global ambassadors, blending their fresh and 
+                    youthful image with the brand's identity.
+                </p>
+
+                    <br>
+
+                <center>
+                <video width="640" height="360" controls loop muted poster="zero-Cover.jpg">
+                <source src="zero.mp4" type="video/mp4">
+                </video>
+                </center>
+                    
+                    <br>
+                
+                <p style="text-indent: 50px; text-align: justify;">
+                    As part of the partnership, they released the 
+                    song "Zero" in April 2023, a promotional track for Coca-Cola Zero Sugar, featuring catchy 
+                    lyrics referencing the beverage. The collaboration extended to a remix with rapper J.I.D and 
+                    participation in the Coca-Cola campaign "Be Who You Are (Real Magic)," alongside Jon Batiste, 
+                    Camilo, and J.I.D. Through this partnership, NewJeans engaged in exclusive content, live 
+                    performances, and promotional activities, reinforcing their growing global influence in both 
+                    music and branding.
+                </p>
+
+                
+            </div>
+        </div>
+
+        <img src="blue-hearts.gif" alt="NewJeans GIF" width="300" class="divider">
+
+        <div class="infosubheading">
+            What's New?
+        </div>
+        <div class="section">
+            <div class="sectioncontent">
+                <center><img src="howsweet.jpg" height="300">
+                <br>
+                NewJeans' 'How Sweet' tops 1 million copies sold
+                </center>
+                <a href="https://koreajoongangdaily.joins.com/news/2024-06-09/entertainment/kpop/NewJeans-How-Sweet-tops-1-million-copies-sold/2064392">
+                    Read more...
+                </a>
+            </div>
+            <div class="sectioncontent">
+                <center><img src="bunniescamp.png" height="300">
+                    <br>
+                    NewJeans fills Tokyo Dome with music, love and tears less than two years since debut
+                    </center>
+                    <a href="https://koreajoongangdaily.joins.com/news/2024-06-28/entertainment/kpop/NewJeans-fills-Tokyo-Dome-with-music-love-and-tears-in-less-than-two-years-since-debut/2078642">
+                        Read more...
+                    </a>
+            </div>
+        </div>
+
+        
+        <img src="blue-hearts.gif" alt="NewJeans GIF" width="300" class="divider">
+
+        <div class="infosubheading">
+            Become a Bunny!
+        </div>
+
+        <div class="section">
+            <div class="sectioncontent">
+                <center>
+                Want to support NewJeans? Check them out on different platforms!
+
+                <br>
+
+                <img src="spotify.png" width="35" class="sectionnav"><a href="https://open.spotify.com/artist/6HvZYsbFfjnjFrWF950C9d">Spotify</a> | 
+                <img src="weverse.png" width="35" class="sectionnav"><a href="https://weverse.io/newjeansofficial/feed">Weverse</a> |
+                <img src="facebook.png" width="30" class="sectionnav"><a href="https://www.facebook.com/official.newjeans">Facebook</a> |
+                <img src="instagram.png" width="30" class="sectionnav"><a href="https://www.instagram.com/newjeans_official/?hl=en">Instagram</a> |
+                <img src="youtube.png" width="30" class="sectionnav"><a href="https://www.youtube.com/channel/UCMki_UkHb4qSc0qyEcOHHJw">YouTube</a>
+                </center>
+            </div>
+
+        </div>
+    </div>
+
+<script>
+    let a=(prompt("What's your ETA? (ex.: 6)"));
+    alert("Really? I doubt that. You might end up arriving on "+(++a)+" o'clock.");
+
+let currentIndex=0;
+const slide=document.getElementById("slide");
+const totalImages=document.querySelectorAll(".slide img").length;
+
+function nextSlide() {
+    for (let i=0; i<totalImages; i++){
+        if(i===currentIndex) {
+            slide.style.transform = `translateX(-${i * 33.5}%)`;
+        }
+    }
+    currentIndex = (currentIndex+1) % totalImages;
+}
+
+setInterval(nextSlide, 3000);
+
+</script>
+</body>
+</html>
